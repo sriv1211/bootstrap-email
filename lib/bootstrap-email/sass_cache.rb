@@ -61,7 +61,7 @@ module BootstrapEmail
       Dir.mkdir(CACHE_DIR) unless File.directory?(CACHE_DIR)
       Dir.mkdir("#{CACHE_DIR}/#{checksum}") unless File.directory?("#{CACHE_DIR}/#{checksum}")
       File.write(cache_path, css)
-      puts "New css file cached for #{type}"
+      STDERR.puts "New css file cached for #{type}"
     end
   end
 end
